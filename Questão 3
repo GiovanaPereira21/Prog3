@@ -1,0 +1,107 @@
+<?php
+
+
+class Empregados {
+
+Public $nome;
+Public $sobrenome;
+Public $mensal;
+Public $anual;
+
+
+
+Public function_construct () {
+$this -> nome = "Giovana";
+$this -> sobrenome = "Couto Pereira";
+$this -> mensal = "1800,00";
+}
+
+Public function setnome ($recebe) {
+return $this -> nome = $recebe;
+}
+
+Public function getnome () {
+return $this -> nome;
+}
+
+Public function setsobrenome ($recebe1) {
+return $this -> sobrenome = $recebe1;
+}
+
+Public function getsobrenome () {
+return $this -> sobrenome;
+}
+
+Public function setmensal ($recebe2) {
+return $this -> mensal = $recebe2;
+}
+
+Public function getmensal () {
+return $this -> mensal;
+}
+
+Public function setanual () {
+return $this -> anual = $this -> mensal * 12;
+}
+
+
+
+Public function getanual () {
+return $this -> anual;
+}
+
+
+
+Public function validamensal () {
+if ($this -> mensal < 0);
+$this -> mensal = 0,0;
+}
+}
+
+Public function aumentamensal () {
+$porc = ($this -> mensal * 10) / 100;
+$this -> mensal = $this -> mensal + $porc;
+}
+}
+
+
+//Empregado 1
+
+$empregado1 = new Empregados ();
+$empregado1 -> validamensal ();
+$empregado1 -> setanual ();
+
+echo "o salario anual de {$empregado1 -. getnome()} e de R$ {$empregado1 -> getanual ()
+}\n";
+
+
+$empregado1 -> aumentamensal();
+$empregado1 -> setanual();
+
+
+echo "o salario anual de {$empregado1 -> getnome()} recebeu um aumento de 10% e agora e de R$ {$empregado1 -> getanual()
+}\n";
+
+
+// Empregado 2
+
+$empregado2 = new Empregados();
+$empregado2 -> setnome ("Diego");
+$empregado2 -> setsobrenome ("Oliveira");
+$empregado2 -> setmensal (1500);
+$empregado2 -> validamensal();
+$empregado2 -> setanual();
+
+
+echo "o salario anual de {$empregado2 -> getnome()} {$empregado2 -> getsobrenome()} e de R$ {$empregado2 -> getanual()
+}\n";
+
+
+$empregado2 -> aumentamensal();
+$empregado2 -> setanual();
+
+echo "o salario anual de {$empregado2 -> getnome()} recebeu um aumento de 10% e agora e de R$ {$empregado2 -> getanual()
+}\n";
+
+
+?>
