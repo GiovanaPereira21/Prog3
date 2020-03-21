@@ -2,7 +2,7 @@
 class Produto{
 
 
-ublic $nome;
+Public $nome;
 Public $preco;
 Public $quantidade;
 Public $pagar;
